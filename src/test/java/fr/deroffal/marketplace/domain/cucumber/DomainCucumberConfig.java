@@ -4,6 +4,7 @@ import java.lang.reflect.Type;
 
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import fr.deroffal.marketplace.domain.DiscountPort;
 import fr.deroffal.marketplace.domain.ItemPort;
 import io.cucumber.java.DefaultDataTableCellTransformer;
 import io.cucumber.java.DefaultDataTableEntryTransformer;
@@ -20,6 +21,9 @@ public class DomainCucumberConfig {
 
     @MockBean
     private ItemPort itemPort;
+
+    @MockBean
+    private DiscountPort discountPort;
 
     @DefaultParameterTransformer
     @DefaultDataTableEntryTransformer
