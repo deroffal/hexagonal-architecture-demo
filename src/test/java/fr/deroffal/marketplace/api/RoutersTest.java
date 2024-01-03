@@ -29,7 +29,7 @@ class RoutersTest {
     private PriceCalculator priceCalculator;
 
     @Test
-    @DisplayName("api : /basket/")
+    @DisplayName("api : /basket")
     void postBasket() {
         doReturn(1008.22)
             .when(priceCalculator)
@@ -39,7 +39,7 @@ class RoutersTest {
             );
 
         var exchange = webTestClient.post()
-            .uri("/basket/").accept(APPLICATION_JSON)
+            .uri("/basket").accept(APPLICATION_JSON)
             .body(fromValue(List.of(new ItemRequest("ball", 1), new ItemRequest("book", 2))))
             .exchange();
 
