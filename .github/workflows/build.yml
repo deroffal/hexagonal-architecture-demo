@@ -1,0 +1,14 @@
+---
+name: Build with Maven
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [ "*" ]
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build-plugin:
+    uses: deroffal/github-actions/.github/workflows/ci-maven.yml@main
