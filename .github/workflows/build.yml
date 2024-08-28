@@ -10,5 +10,8 @@ on:
       - "main"
 
 jobs:
-  build-plugin:
+  build:
     uses: deroffal/github-actions/.github/workflows/ci-maven.yml@main
+    with:
+      java-version: 21
+      java-distribution: 'temurin'
